@@ -1,0 +1,20 @@
+<h2><%= I18n.t(:label_like) %></h2>
+<table class="list"  style="max-width: 500px;">
+  <tr>
+    <th><%= I18n.t(:field_like_user) %></th>
+    <th>⁠<%= I18n.t(:field_like_count_for_issue) %></th>
+    <th><%= I18n.t(:field_like_count_for_journal) %></th>
+    <th><%= I18n.t(:field_like_count_for_wiki) %></th>
+    <th><%= I18n.t(:field_like_count_total) %></th>
+  </tr>
+  <% @users.each{|user| %>
+    <tr>
+      <td><%= user.lastname %></td>
+      <td><%= @like_count_for_issue[user.id] %></td>
+      <td><%= @like_count_for_journal[user.id] %></td>
+      <td><%= @like_count_for_wiki[user.id] %></td>
+      <td><%= @like_count_total[user.id] %></td>
+    </tr>
+  <% } %>
+</table>
+

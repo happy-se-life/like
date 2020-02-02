@@ -1,0 +1,18 @@
+.heart-icon-main {
+    width:45px;
+    margin-left: auto;
+    cursor : pointer;
+}
+
+.heart-icon-sub {
+    position: relative;
+    text-align: right;
+}
+
+.heart-count {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    top: -10px;
+    right: 5px;
+}
