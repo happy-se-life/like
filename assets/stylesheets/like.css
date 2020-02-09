@@ -1,10 +1,10 @@
-.heart-icon-main {
+.heart-icon-outer {
     width:45px;
     margin-left: auto;
     cursor : pointer;
 }
 
-.heart-icon-sub {
+.heart-icon-inner {
     position: relative;
     text-align: right;
 }
