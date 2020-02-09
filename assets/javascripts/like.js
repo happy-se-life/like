@@ -21,8 +21,8 @@ $(function() {
                 $('#heart-off-count-' + like_type + '-' + like_id).text(count);
             }
             if (count > 0) {
-                $('#heart-on-' + like_type + '-' + like_id).show();
                 $('#heart-off-' + like_type + '-' + like_id).hide();
+                $('#heart-on-' + like_type + '-' + like_id).show().animate({top: -5}, 200).animate({top: 0}, 200);
                 $('#heart-on-count-' + like_type + '-' + like_id).text(count);
             }
         }).fail( (data) => {
