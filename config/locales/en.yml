@@ -1,8 +1,8 @@
 # English strings go here for Rails i18n
 en:
-  label_like: "LIKE!"
-  field_like_user: "Name"
-  field_like_count_for_issue: "Ticket"
-  field_like_count_for_journal: "Notes"
-  field_like_count_for_wiki: "Wiki"
-  field_like_count_total: "Total"
+  like_label_like: "LIKE!"
+  like_field_user: "Name"
+  like_field_count_for_issue: "Ticket"
+  like_field_count_for_journal: "Notes"
+  like_field_count_for_wiki: "Wiki"
+  like_field_count_total: "Total"

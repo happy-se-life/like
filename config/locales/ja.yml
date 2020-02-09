@@ -1,8 +1,8 @@
 # Japanese strings go here for Rails i18n
 ja:
-  label_like: "いいね！"
-  field_like_user: "名前"
-  field_like_count_for_issue: "チケット"
-  field_like_count_for_journal: "注記"
-  field_like_count_for_wiki: "Wiki"
-  field_like_count_total: "計"
+  like_label_like: "いいね！"
+  like_field_user: "名前"
+  like_field_count_for_issue: "チケット"
+  like_field_count_for_journal: "注記"
+  like_field_count_for_wiki: "Wiki"
+  like_field_count_total: "計"
