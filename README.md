@@ -1,11 +1,13 @@
 # Redmine like plugin
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
 
+## What's new
+* Added e-mail notification.
+* Added icons animation.
+
 ## Features
 * You can like tickets, notes and wikis.
-
-## Planned Features
-* e-mail notification.
+* e-mail notification when you liked it.
 
 ## Screenshots
 
@@ -46,6 +48,10 @@ rm -rf like
 </pre>
 
 4. Restart redmine.
+
+## Limitation
+* Only supports English and Japanese.
+* This is an experimental plugin.
 
 ## License
 * MIT Lisense
