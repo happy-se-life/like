@@ -6,3 +6,4 @@ en:
   like_field_count_for_journal: "Notes"
   like_field_count_for_wiki: "Wiki"
   like_field_count_total: "Total"
+  like_mail_title: "%{name} liked your %{kind}"

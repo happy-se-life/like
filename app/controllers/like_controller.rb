@@ -29,6 +29,9 @@ class LikeController < ApplicationController
         like_id = params[:like_id]
         like_type = params[:like_type]
 
+        # Referer
+        referer = request.env['HTTP_REFERER']
+
         # Get like
         like = Like.where(like_id: like_id).where(like_type: like_type)
         count = like.length
@@ -39,6 +42,29 @@ class LikeController < ApplicationController
           # Add
           new_like = Like.new(user_id: User.current.id, like_id: like_id, like_type: like_type)
           new_like.save!
+          # Get user to send
+          case like_type
+            when 'issue' then
+              kind = I18n.t(:label_issue)
+              issue = Issue.find(like_id)
+              user_to = User.find(issue.author_id)
+            when 'journal' then
+              kind = I18n.t(:field_notes)
+              journal = Journal.find(like_id)
+              user_to = User.find(journal.user_id)
+            when 'wiki' then
+              kind = I18n.t(:label_wiki)
+              wiki_content = WikiPage.find(like_id).content
+              user_to = User.find(wiki_content.author_id)
+            else
+              # nothing to do
+          end
+          # Send a mail
+          if defined? kind
+            title = I18n.t(:like_mail_title, :name => User.current.lastname, :kind => kind)
+            content = referer.to_s
+            LikeMailer.on_like(user_to, title, content).deliver
+          end
           count = count + 1
         else
           # Remove
