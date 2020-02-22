@@ -1,11 +1,13 @@
 <!-- Like Icon (common template) -->
-<div id="heart-icon-main-<%= type %>-<%= id %>" class="heart-icon-outer">
-    <div id="heart-off-<%= type %>-<%= id %>" class="heart-icon-inner" style="<% if count > 0 then %>display: none;<% end %>">
-        <%= image_tag "heart_off.png", :plugin => "like", :height => "18" %>
-        <p id="heart-off-count-<%= type %>-<%= id %>" class="heart-count"><%= count %></p>
+<% icon_off = design + "_off.png" %>
+<% icon_on = design + "_on.png" %>
+<div id="heart-icon-main-<%= type %>-<%= id %>" class="icon-outer">
+    <div id="heart-off-<%= type %>-<%= id %>" class="side-by-side" style="<% if count > 0 then %>display: none;<% end %>">
+        <p><%= image_tag icon_off, :plugin => "like", :height => "12" %></p>
+        <p id="heart-off-count-<%= type %>-<%= id %>" style="color: gray;"><%= count %></p>
     </div>
-    <div id="heart-on-<%= type %>-<%= id %>" class="heart-icon-inner" style="<% if count < 1 then %>display: none;<% end %>">
-        <%= image_tag "heart_on.png", :plugin => "like", :height => "18" %>
-        <p id="heart-on-count-<%= type %>-<%= id %>" class="heart-count"><%= count %></p>
+    <div id="heart-on-<%= type %>-<%= id %>" class="side-by-side" style="<% if count < 1 then %>display: none;<% end %>">
+        <p><%= image_tag icon_on, :plugin => "like", :height => "12" %></p>
+        <p id="heart-on-count-<%= type %>-<%= id %>" style="color: red;"><%= count %></p>
     </div>
 </div>

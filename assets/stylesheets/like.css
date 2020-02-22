@@ -1,18 +1,11 @@
-.heart-icon-outer {
-    width:45px;
+.icon-outer {
+    width:40px;
     margin-left: auto;
+    text-align: right;
     cursor : pointer;
 }
 
-.heart-icon-inner {
-    position: relative;
-    text-align: right;
-}
-
-.heart-count {
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    top: -10px;
-    right: 5px;
-}
+.side-by-side p{
+    display:inline-block;
+    vertical-align:middle;
+   }
