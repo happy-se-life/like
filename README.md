@@ -2,12 +2,12 @@
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
 
 ## What's new
-* Added e-mail notification.
-* Added icons animation.
+* Fix problem with sub-URI configuration
 
 ## Features
 * You can like tickets, notes and wikis.
-* e-mail notification when you liked it.
+* e-mail notifications when someone likes you.
+* Animated icons.
 
 ## Screenshots
 
