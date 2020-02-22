@@ -2,7 +2,8 @@
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
 
 ## What's new
-* Fix problem with sub-URI configuration
+* Fix problem with sub-URI configuration.
+* You can chose an icon from 6 design.
 
 ## Features
 * You can like tickets, notes and wikis.
@@ -11,8 +12,8 @@ This plugin allows you to send the like on Redmine. It is a very simple plugin, 
 
 ## Screenshots
 
-### Overview
-<img src="./assets/images/like_issue.png" width="600px">
+### Type of icons
+<img src="./assets/images/type_of_icons.png" width="305px">
 
 ### Like Total
 <img src="./assets/images/like_total.png" width="600px">
@@ -31,7 +32,9 @@ git clone https://github.com/happy-se-life/like.git
 bundle exec rake redmine:plugins:migrate NAME=like RAILS_ENV=production
 </pre>
 
-4. Restart redmine.
+4. Edit models/LikeConstants.rb to chose icon type.
+
+5. Restart redmine.
 
 ## Uninstall
 
