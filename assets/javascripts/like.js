@@ -5,7 +5,7 @@ $(function() {
         var like_type = arr[3];
         // AJAX
         $.ajax({
-            url:'/update_like',
+            url:'./update_like',
             type:'POST',
             data:{
                 'like_id' :like_id, 
