@@ -72,7 +72,7 @@ class LikeController < ApplicationController
           count = count - 1
         end
 
-        # Retuen json
+        # Return json
         result_hash = {}
         result_hash["result"] = count
         render json: result_hash
