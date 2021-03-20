@@ -2,19 +2,26 @@
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
 
 ## What's new
-* Fix problem with sub-URI configuration.
-* You can chose an icon from 6 design.
+* Added support for Redmine version 4.1 or later.
 
 ## Features
-* You can like tickets, notes and wikis.
+* You can like issues, notes and wikis.
 * e-mail notifications when someone likes you.
 
 ## Screenshots
 
-### Type of icons
+### Issues and notes
+<img src="./assets/images/issue_page_ss.png" width="600px">
+
+### Wiki
+<img src="./assets/images/wiki_page_ss.png" width="600px">
+
+### 6 types of icons
+* To change the icon, you need to change ICON_DESIGN in models/like_constants.rb.
+
 <img src="./assets/images/type_of_icons.png" width="305px">
 
-### Like Total
+### Display of total number of likes
 <img src="./assets/images/like_total.png" width="600px">
 
 ## Install
@@ -53,7 +60,6 @@ rm -rf like
 
 ## Limitation
 * Only supports English and Japanese.
-* This is an experimental plugin.
 
 ## License
 * MIT Lisense
