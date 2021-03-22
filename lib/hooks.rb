@@ -11,9 +11,11 @@ module LikeHooks
     end
     # Like icon on Journal
     def view_issues_history_journal_bottom(context={})
-          if context[:journal].notes.length == 0 then
-            # Resolved an issue with duplicate icons in version 4.1
-            return
+          if context[:journal].notes != nil then
+            if context[:journal].notes.length == 0 then
+              # Resolved an issue with duplicate icons in version 4.1
+              return
+            end
           end
           like_count = Like.where(like_id: context[:journal].id).where(like_type: 'journal').length
           icon_design = LikeConstants::ICON_DESIGN
