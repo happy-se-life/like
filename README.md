@@ -3,6 +3,7 @@ This plugin allows you to send the like on Redmine. It is a very simple plugin, 
 
 ## What's new
 * Added support for Redmine version 4.1 or later.
+* Added email notification settings (on/off).
 
 ## Features
 * You can like issues, notes and wikis.
