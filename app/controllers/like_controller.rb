@@ -60,7 +60,7 @@ class LikeController < ApplicationController
               # nothing to do
           end
           # Send a mail
-          if defined? kind
+          if LikeConstants::ENABLE_MAIL_NOTIFICATION == 1 && defined? kind
             title = I18n.t(:like_mail_title, :name => User.current.lastname, :kind => kind)
             content = referer.to_s
             LikeMailer.on_like(user_to, title, content).deliver

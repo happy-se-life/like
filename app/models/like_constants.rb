@@ -12,4 +12,7 @@ class LikeConstants
     # "icon_thumbsup_shadow"
     #
     ICON_DESIGN = "icon_heart"
+    #
+    # Enable mail notification (1:on 0:off)
+    ENABLE_MAIL_NOTIFICATION = 0
 end
