@@ -14,16 +14,20 @@ $(function() {
             dataType: 'json',
             async: true
         }).success( (data) => {
-            var count = Number(data.result);
+            var count = Number(data.count);
             if (count == 0) {
                 $('#heart-on-' + like_type + '-' + like_id).hide();
                 $('#heart-off-' + like_type + '-' + like_id).show();
                 $('#heart-off-count-' + like_type + '-' + like_id).text(count);
+                $('#heart-icon-main-' + like_type + '-' + like_id).removeClass('like-sender-tooltip');
+                $('#heart-senders-' + like_type + '-' + like_id).html('');
             }
             if (count > 0) {
                 $('#heart-off-' + like_type + '-' + like_id).hide();
                 $('#heart-on-' + like_type + '-' + like_id).show();
                 $('#heart-on-count-' + like_type + '-' + like_id).text(count);
+                $('#heart-icon-main-' + like_type + '-' + like_id).addClass('like-sender-tooltip');
+                $('#heart-senders-' + like_type + '-' + like_id).html(data.senders);
             }
         }).fail( (data) => {
             console.log("AJAX FAILED.");

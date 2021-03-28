@@ -2,7 +2,6 @@
 <%= javascript_include_tag "like", :plugin => "like" %>
 <!-- CSS -->
 <%= stylesheet_link_tag "like", :plugin => "like" %>
-<!-- Like Icon -->
 <% if is_wiki == true %>
-    <%= render :partial => "like/likeIcon", :locals => { id: id, count: count, type: type, design: design } %>
+    <%= render :partial => "like/likeIcon", :locals => { id: id, count: count, type: type, design: design, like_senders: like_senders} %>
 <% end %>

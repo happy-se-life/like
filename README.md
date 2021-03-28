@@ -2,8 +2,9 @@
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
 
 ## What's new
-* Added support for Redmine version 4.1 or later.
-* Added email notification settings (on/off).
+* You can now view the person who liked it with a tooltip. #2
+* Added support for Redmine version 4.1 or later. #1
+* Added email notification settings (on or off).
 
 ## Features
 * You can like issues, notes and wikis.
@@ -16,6 +17,9 @@ This plugin allows you to send the like on Redmine. It is a very simple plugin, 
 
 ### Wiki
 <img src="./assets/images/wiki_page_ss.png" width="600px">
+
+### Tooltip of the person who liked it
+<img src="./assets/images/like_tooltip_ss.png" width="600px">
 
 ### 6 types of icons
 * To change the icon, you need to change ICON_DESIGN in models/like_constants.rb.

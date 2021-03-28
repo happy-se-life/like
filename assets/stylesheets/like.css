@@ -1,11 +1,46 @@
-.icon-outer {
-    width:40px;
+.like-icon-outer {
+    width: 40px;
     margin-left: auto;
     text-align: right;
-    cursor : pointer;
+    cursor: pointer;
 }
 
-.side-by-side p{
-    display:inline-block;
-    vertical-align:middle;
-   }
+.like-side-by-side p{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.like-sender-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+.like-sender-tooltip p{
+    margin:0;
+    padding:0;
+}
+.like-sender-content {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    font-size: x-small;
+    text-align: left;
+    color: #fff;
+    border-radius: 5px;
+    background: #000;
+    width: 100px;
+}
+.like-sender-content:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    border: 15px solid transparent;
+    border-top: 15px solid #000;
+    margin-left: -5px;
+    transform: rotateZ(270deg);
+}
+.like-sender-tooltip:hover .like-sender-content{
+    display: inline-block;
+    top: -10px;
+    left: -120px;
+}

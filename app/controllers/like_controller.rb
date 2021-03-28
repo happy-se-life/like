@@ -72,9 +72,19 @@ class LikeController < ApplicationController
           count = count - 1
         end
 
+        # Create senders string
+        latest_like = Like.where(like_id: like_id).where(like_type: like_type)
+        latest_like_sender_ids = latest_like.pluck(:user_id)
+        latest_like_senders = User.where(id: latest_like_sender_ids)
+        senders = ""
+        latest_like_senders.each {|user|
+          senders += "<p>" + CGI.escapeHTML(user.name) + "</p>"
+        }
+
         # Return json
         result_hash = {}
-        result_hash["result"] = count
+        result_hash["count"] = count
+        result_hash["senders"] = senders
         render json: result_hash
   end
 

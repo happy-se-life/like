@@ -1,13 +1,25 @@
-<!-- Like Icon (common template) -->
+<!-- Common template of Like! -->
 <% icon_off = design + "_off.png" %>
 <% icon_on = design + "_on.png" %>
-<div id="heart-icon-main-<%= type %>-<%= id %>" class="icon-outer">
-    <div id="heart-off-<%= type %>-<%= id %>" class="side-by-side" style="<% if count > 0 then %>display: none;<% end %>">
+<% if count != 0 then %>
+    <div id="heart-icon-main-<%= type %>-<%= id %>" class="like-icon-outer like-sender-tooltip">
+<% else %>
+    <div id="heart-icon-main-<%= type %>-<%= id %>" class="like-icon-outer">
+<% end %>
+    <div id="heart-off-<%= type %>-<%= id %>" class="like-side-by-side" style="<% if count > 0 then %>display: none;<% end %>">
         <p><%= image_tag icon_off, :plugin => "like", :height => "12" %></p>
         <p id="heart-off-count-<%= type %>-<%= id %>" style="color: gray;"><%= count %></p>
     </div>
-    <div id="heart-on-<%= type %>-<%= id %>" class="side-by-side" style="<% if count < 1 then %>display: none;<% end %>">
+    <div id="heart-on-<%= type %>-<%= id %>" class="like-side-by-side" style="<% if count < 1 then %>display: none;<% end %>">
         <p><%= image_tag icon_on, :plugin => "like", :height => "12" %></p>
         <p id="heart-on-count-<%= type %>-<%= id %>" style="color: red;"><%= count %></p>
     </div>
+    <div class="like-sender-content">
+        <p id="heart-senders-<%= type %>-<%= id %>">
+            <% like_senders.each {|user| %>
+                <%= user.name %>
+            <% } %>
+        </p>
+    </div>
 </div>
+<!-- End of common template -->
