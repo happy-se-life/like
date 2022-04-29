@@ -7,3 +7,5 @@ ja:
   like_field_count_for_wiki: "Wiki"
   like_field_count_total: "計"
   like_mail_title: "%{name}さんがあなたの%{kind}にいいね！しました"
+  like_label_received_count: "受け取ったいいねの数"
+  like_label_sent_count: "送ったいいねの数"

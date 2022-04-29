@@ -7,3 +7,5 @@ en:
   like_field_count_for_wiki: "Wiki"
   like_field_count_total: "Total"
   like_mail_title: "%{name} liked your %{kind}"
+  like_label_received_count: "Number of likes received"
+  like_label_sent_count: "The number of likes sent"
