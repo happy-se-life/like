@@ -33,7 +33,17 @@ module LikeHooks
       request = context[:request]
       if context[:controller].controller_name == 'wiki' && context[:controller].action_name == 'show' then
         wiki_title = URI.decode(request.path.split("/").last)
-        wiki = WikiPage.find_by(title: wiki_title)
+        str = URI.decode(request.path.split("/projects/").last)
+        identifier = str.split("/wiki/").first
+        wiki_pages = WikiPage.where(title: wiki_title)
+        for wiki_page in wiki_pages do
+          if wiki_page.project.identifier == identifier then
+            wiki = wiki_page
+            break
+          else
+            wiki = nil
+          end
+        end
         if wiki != nil then
           wiki_id = wiki.id
           like = Like.where(like_id: wiki_id).where(like_type: 'wiki')
