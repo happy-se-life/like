@@ -2,6 +2,10 @@
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
 
 ## What's new
+* Add the number of likes received to the summary page #6 (Attention: need Migration)
+<pre>
+bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+</pre>
 * You can now view the person who liked it with a tooltip. #2
 * Added support for Redmine version 4.1 or later. #1
 * Added email notification settings (on or off).
@@ -9,6 +13,7 @@ This plugin allows you to send the like on Redmine. It is a very simple plugin, 
 ## Features
 * You can like issues, notes and wikis.
 * e-mail notifications when someone likes you.
+* View the number of likes recieved/sent each user on the summary page. 
 
 ## Screenshots
 
@@ -27,7 +32,7 @@ This plugin allows you to send the like on Redmine. It is a very simple plugin, 
 <img src="./assets/images/type_of_icons.png" width="305px">
 
 ### Display of total number of likes
-<img src="./assets/images/like_total.png" width="600px">
+<img src="./assets/images/summary_page.png" width="600px">
 
 ## Install
 
