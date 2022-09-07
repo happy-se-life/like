@@ -2,6 +2,7 @@
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
 
 ## What's new
+* Started accepting donations using Liberapay. The donate button is in the right sidebar.
 * Add the number of likes received to the summary page #6 (Attention: need Migration)
 <pre>
 bundle exec rake redmine:plugins:migrate RAILS_ENV=production
