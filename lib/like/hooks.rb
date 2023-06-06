@@ -1,4 +1,4 @@
-module LikeHooks
+module Like::Hooks
   class Hooks < Redmine::Hook::ViewListener
     # Like icon on issue
     def view_issues_show_details_bottom(context={})
