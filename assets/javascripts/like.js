@@ -13,7 +13,7 @@ $(function() {
             },
             dataType: 'json',
             async: true
-        }).success( (data) => {
+        }).done( (data) => {
             var count = Number(data.count);
             if (count == 0) {
                 $('#heart-on-' + like_type + '-' + like_id).hide();
