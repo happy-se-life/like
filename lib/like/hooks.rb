@@ -32,9 +32,8 @@ module Like::Hooks
     def view_layouts_base_content(context={})
       request = context[:request]
       if context[:controller].controller_name == 'wiki' && context[:controller].action_name == 'show' then
-        wiki_title = URI.decode(request.path.split("/").last)
-        str = URI.decode(request.path.split("/projects/").last)
-        identifier = str.split("/wiki/").first
+        wiki_title = URI.decode_www_form(request.path.split("/").last)
+        identifier = context[:project].identifier
         wiki_pages = WikiPage.where(title: wiki_title)
         for wiki_page in wiki_pages do
           if wiki_page.project.identifier == identifier then
